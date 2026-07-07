@@ -10,12 +10,13 @@ requirements = python3,kivy
 orientation = portrait
 fullscreen = 0
 
-# Supporta sia i telefoni moderni a 64-bit sia quelli leggermente più vecchi
-android.archs = arm64-v8a, armeabi-v7a
+# Compiliamo solo per arm64 per velocizzare ed evitare conflitti di librerie a 32bit
+android.archs = arm64-v8a
 
-# Aggiornato all'API 34 per garantire la compatibilità con i download attuali
-android.api = 34
+# Versioni stabili bloccate per evitare bug dei server Cloud
+android.api = 33
 android.minapi = 21
+android.ndk = 25b
 android.ndk_api = 21
 
 # Richiesta esplicita dei permessi di archiviazione
