@@ -13,10 +13,10 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Install Tools
+      - name: Install All Kivy Dependencies
         run: |
           sudo apt update
-          sudo apt install -y git zip unzip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libssl-dev cmake
+          sudo apt install -y build-essential git ccache unzip pkg-config libffi-dev libssl-dev autoconf libtool textinfo libncurses5-dev cmake
           pip3 install --user --upgrade buildozer cython virtualenv
 
       - name: Build APK
