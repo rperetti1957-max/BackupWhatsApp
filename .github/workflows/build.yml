@@ -16,7 +16,7 @@ jobs:
       - name: Install All Kivy Dependencies
         run: |
           sudo apt update
-          sudo apt install -y build-essential git ccache unzip pkg-config libffi-dev libssl-dev autoconf libtool textinfo libncurses5-dev cmake
+          sudo apt install -y build-essential git ccache unzip pkg-config libffi-dev libssl-dev autoconf libtool libncurses5-dev cmake
           pip3 install --user --upgrade buildozer cython virtualenv
 
       - name: Build APK
